@@ -1,169 +1,134 @@
-import Highlight from "@/components/Highlight";
 import Link from "next/link";
 import React from "react";
+import {
+  AccessibilityIcon,
+  BrushIcon,
+  FilesIcon,
+  PowerIcon,
+  VenetianMaskIcon,
+} from "./icons";
 
 export default function Home() {
   return (
-    <div className="container mx-auto flex-1 py-12 md:py-24">
-      <div className="grid grid-cols-1 gap-12 md:grid-cols-[250px_1fr]">
-        <nav className="sticky top-16 hidden md:block">
-          <div className="space-y-4">
-            <h3 className="text-lg font-semibold">Table of Contents</h3>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <Link href="#" className="hover:underline" prefetch={false}>
-                  Introduction
+    <div className="flex flex-col min-h-[100dvh]">
+      <header className="bg-primary text-primary-foreground py-12 md:py-20 lg:py-24">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col justify-center space-y-8 text-center">
+            <div className="space-y-4">
+              <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-500">
+                Discover Our Unique Features
+              </h1>
+              <p className="text-lg text-primary-foreground/80">
+                Unlock the power of dynamic input masking with our feature-rich
+                React library. Transform your forms and enhance the user
+                experience.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  href="#"
+                  className="inline-flex h-10 items-center justify-center rounded-md bg-primary-foreground px-6 text-sm font-medium text-primary shadow transition-colors hover:bg-primary-foreground/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+                  prefetch={false}
+                >
+                  Get Started
                 </Link>
-              </li>
-              <li>
-                <Link href="#" className="hover:underline" prefetch={false}>
-                  Key Concepts
+                <Link
+                  href="#"
+                  className="inline-flex h-10 items-center justify-center rounded-md border border-primary-foreground/20 bg-primary/10 px-6 text-sm font-medium text-primary-foreground shadow-sm transition-colors hover:bg-primary-foreground/20 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+                  prefetch={false}
+                >
+                  View Demo
                 </Link>
-              </li>
-              <li>
-                <Link href="#" className="hover:underline" prefetch={false}>
-                  Code Samples
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="hover:underline" prefetch={false}>
-                  Advanced Topics
-                </Link>
-              </li>
-            </ul>
+              </div>
+            </div>
           </div>
-        </nav>
-        <div className="space-y-12">
-          <section id="introduction">
-            <h2 className="text-3xl font-bold">Introduction</h2>
-            <p className="mt-4 text-muted-foreground">
-              Welcome to the documentation for our powerful web development
-              platform. In this section, ll provide an overview of the key
-              features and capabilities of our product.
-            </p>
-          </section>
-          <section id="key-concepts">
-            <h2 className="text-3xl font-bold">Key Concepts</h2>
-            <div className="mt-4 grid gap-8">
-              <div>
-                <h3 className="text-xl font-semibold">
-                  Serverless Architecture
-                </h3>
-                <p className="mt-2 text-muted-foreground">
-                  Our platform is built on a serverless architecture, which
-                  means you can focus on building your application without
-                  worrying about managing servers or infrastructure.
-                </p>
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold">Automatic Scaling</h3>
-                <p className="mt-2 text-muted-foreground">
-                  Our platform automatically scales your application to handle
-                  increased traffic and demand, ensuring your users always have
-                  a fast and reliable experience.
-                </p>
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold">Integrated Tooling</h3>
-                <p className="mt-2 text-muted-foreground">
-                  Our platform provides a suite of integrated tools and
-                  services, including a powerful CLI, a comprehensive dashboard,
-                  and seamless integration with your favorite development tools.
-                </p>
-              </div>
-            </div>
-          </section>
-          <section id="code-samples">
-            <h2 className="text-3xl font-bold">Code Samples</h2>
-            <div className="mt-4 space-y-8">
-              <div>
-                <h3 className="text-xl font-semibold">
-                  Deploying a Simple Web App
-                </h3>
-                <Highlight
-                  code={`import React from 'react';
-              
-function MyComponent() {
-  return (
-    <div className="bg-white rounded-lg shadow-md p-6">
-      <h2 className="text-2xl font-bold mb-4">Welcome to my component</h2>
-      <p className="text-gray-600 mb-6">
-        This is a sample React component with some basic styling.
-      </p>
-      <button className="bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded">
-        Click me
-      </button>
-    </div>
-  );
-}
-
-export default MyComponent;`}
-                />
-                <p className="mt-4 text-muted-foreground">
-                  This code sample demonstrates how to use the Acme CLI to
-                  create a new web application and deploy it to our platform.
-                </p>
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold">
-                  Configuring Automatic Scaling
-                </h3>
-                <pre className="mt-4 rounded-lg bg-muted p-4 font-mono text-sm">
-                  <code>{`
-# Configure auto-scaling
-acme scale my-app --min-instances 2 --max-instances 10
-
-# Monitor scaling events
-acme logs my-app --events
-                      `}</code>
-                </pre>
-                <p className="mt-4 text-muted-foreground">
-                  This code sample shows how to configure automatic scaling for
-                  your application, as well as how to monitor scaling events
-                  using the Acme CLI.
-                </p>
-              </div>
-            </div>
-          </section>
-          <section id="advanced-topics">
-            <h2 className="text-3xl font-bold">Advanced Topics</h2>
-            <div className="mt-4 grid gap-8">
-              <div>
-                <h3 className="text-xl font-semibold">
-                  Integrating with Third-Party Services
-                </h3>
-                <p className="mt-2 text-muted-foreground">
-                  Our platform provides seamless integration with a wide range
-                  of third-party services, including databases, authentication
-                  providers, and more. Learn how to connect your application to
-                  these services and leverage their capabilities.
-                </p>
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold">
-                  Implementing Custom Domains
-                </h3>
-                <p className="mt-2 text-muted-foreground">
-                  Customize the domain for your application to match your brand
-                  and provide a cohesive user experience. Our platform makes it
-                  easy to set up and manage custom domains.
-                </p>
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold">
-                  Monitoring and Debugging
-                </h3>
-                <p className="mt-2 text-muted-foreground">
-                  Our platform provides powerful tools for monitoring the health
-                  and performance of your application, as well as debugging any
-                  issues that may arise. Learn how to leverage these tools to
-                  ensure your application is running smoothly.
-                </p>
-              </div>
-            </div>
-          </section>
         </div>
-      </div>
+      </header>
+      <section className="w-full py-12 md:py-24 lg:py-32">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            <div className="space-y-2">
+              <VenetianMaskIcon />
+              <h3 className="text-xl font-bold">Flexible Masking</h3>
+              <p className="text-muted-foreground">
+                Support for a wide range of mask types, including phone numbers,
+                dates, credit cards, and more.
+              </p>
+            </div>
+            <div className="space-y-2">
+              <BrushIcon />
+              <h3 className="text-xl font-bold">Customizable Styles</h3>
+              <p className="text-muted-foreground">
+                Easily customize the appearance of your mask inputs to match
+                your brand and design.
+              </p>
+            </div>
+            <div className="space-y-2">
+              <AccessibilityIcon />
+              <h3 className="text-xl font-bold">Accessibility</h3>
+              <p className="text-muted-foreground">
+                Ensure your forms are accessible to all users with built-in
+                support for screen readers and keyboard navigation.
+              </p>
+            </div>
+            <div className="space-y-2">
+              <PowerIcon />
+              <h3 className="text-xl font-bold">High Performance</h3>
+              <p className="text-muted-foreground">
+                Optimized for speed and efficiency, with minimal impact on your
+                application&apos;s performance.
+              </p>
+            </div>
+            <div className="space-y-2">
+              <AccessibilityIcon />
+              <h3 className="text-xl font-bold">Responsive Design</h3>
+              <p className="text-muted-foreground">
+                Seamlessly integrate with your responsive web design, ensuring a
+                consistent user experience across all devices.
+              </p>
+            </div>
+            <div className="space-y-2">
+              <FilesIcon />
+              <h3 className="text-xl font-bold">Comprehensive Documentation</h3>
+              <p className="text-muted-foreground">
+                Detailed documentation and examples to help you get up and
+                running quickly.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="installation" className="w-full py-12 md:py-24 lg:py-32">
+        <div className="container mx-auto grid items-center gap-6 px-4 md:px-6 lg:grid-cols-2 lg:gap-10">
+          <div className="space-y-2">
+            <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">
+              Get Started with Mask Input
+            </h2>
+            <p className="max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+              Follow these simple steps to add the mask input library to your
+              React project.
+            </p>
+          </div>
+          <div className="flex flex-col gap-4">
+            <div className="rounded-md border border-input bg-background p-4">
+              <h3 className="text-lg font-bold">Install the Library</h3>
+              <pre className="mt-2 overflow-auto rounded-md bg-muted p-4 text-sm">
+                <code>npm install @acme/mask-input</code>
+              </pre>
+            </div>
+            <div className="rounded-md border border-input bg-background p-4">
+              <h3 className="text-lg font-bold">Import and Use</h3>
+              <pre className="mt-2 overflow-auto rounded-md bg-muted p-4 text-sm">
+                <code>{`import { MaskInput } from '@acme/mask-input'
+
+<MaskInput
+  mask="(999) 999-9999"
+  placeholder="(123) 456-7890"
+/>`}</code>
+              </pre>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

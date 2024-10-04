@@ -1,6 +1,6 @@
 import Introduction from "@/screens/docs/introduction";
 import React from "react";
 
-export default function DocsPage() {
+export default function IntroductionPage() {
   return <Introduction />;
 }
