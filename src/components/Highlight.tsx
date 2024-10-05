@@ -15,8 +15,8 @@ export default function Highlight({ code }: { code: string }) {
   };
 
   return (
-    <div className="bg-[#1e1e1e] rounded-lg p-6 w-full max-w-4xl">
-      <div className="flex items-center justify-end mb-4">
+    <div className="bg-[#1e1e1e] rounded-lg pl-6 pb-6 pr-2 pt-2 w-full max-w-4xl">
+      <div className="flex items-center justify-end mb-2">
         <Button
           onClick={handleCopy}
           variant="ghost"
@@ -28,7 +28,7 @@ export default function Highlight({ code }: { code: string }) {
           <span className="sr-only">Copy code</span>
         </Button>
       </div>
-      <pre className="rounded-md overflow-auto">
+      <pre className="rounded-md overflow-auto mr-4">
         <code className="language-jsx text-[#d4d4d4] whitespace-pre-wrap">
           {code}
         </code>

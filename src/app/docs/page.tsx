@@ -1,6 +1,5 @@
-import Introduction from "@/screens/docs/introduction";
-import React from "react";
+import { redirect } from "next/navigation";
 
 export default function DocsPage() {
-  return <Introduction />;
+  return redirect("/docs/introduction");
 }

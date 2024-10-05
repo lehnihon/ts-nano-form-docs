@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React from "react";
+import NavMenu from "./NavMenu";
 
 export default function Page({ children }: { children: React.ReactNode }) {
   return (
@@ -24,34 +25,12 @@ export default function Page({ children }: { children: React.ReactNode }) {
             <span className="sr-only">Acme Inc</span>
           </Link>
           <nav className="ml-auto flex items-center space-x-4">
-            <Link
-              href="#"
-              className="text-sm font-medium hover:underline"
-              prefetch={false}
-            >
+            <NavMenu className="text-sm font-medium" href="/docs">
               Docs
-            </Link>
-            <Link
-              href="#"
-              className="text-sm font-medium hover:underline"
-              prefetch={false}
-            >
-              Blog
-            </Link>
-            <Link
-              href="#"
-              className="text-sm font-medium hover:underline"
-              prefetch={false}
-            >
-              Pricing
-            </Link>
-            <Link
-              href="#"
-              className="text-sm font-medium hover:underline"
-              prefetch={false}
-            >
+            </NavMenu>
+            <NavMenu className="text-sm font-medium" href="/contact">
               Contact
-            </Link>
+            </NavMenu>
           </nav>
         </div>
       </header>

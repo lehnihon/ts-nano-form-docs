@@ -17,13 +17,7 @@ export default function DocsLayout({
                 <NavMenu href="/docs/introduction">Introduction</NavMenu>
               </li>
               <li>
-                <NavMenu href="/docs/key">Key Concepts</NavMenu>
-              </li>
-              <li>
-                <NavMenu href="/docs/key">Code Samples</NavMenu>
-              </li>
-              <li>
-                <NavMenu href="/docs/key">Advanced</NavMenu>
+                <NavMenu href="/docs/quick-start">Quick Start</NavMenu>
               </li>
             </ul>
           </div>

@@ -7,7 +7,7 @@ import { ReactNode } from "react";
 type NavMenuProps = {
   href: string;
   children: ReactNode;
-  className: string;
+  className?: string;
 };
 
 export default function NavMenu({ href, className, children }: NavMenuProps) {

@@ -1,4 +1,3 @@
-import Highlight from "@/components/Highlight";
 import React from "react";
 
 export default function Introduction() {
@@ -7,123 +6,88 @@ export default function Introduction() {
       <section id="introduction">
         <h2 className="text-3xl font-bold">Introduction</h2>
         <p className="mt-4 text-muted-foreground">
-          Welcome to the documentation for our powerful web development
-          platform. In this section, ll provide an overview of the key features
-          and capabilities of our product.
+          Lightweight, dependency-free library designed to streamline input text
+          validation and masking .
+        </p>
+        <p className="mt-2 text-muted-foreground">
+          Built entirely in TypeScript, ensures type safety and a smooth
+          developer experience, while offering powerful features to enhance user
+          input handling.
+        </p>
+        <p className="mt-2 text-muted-foreground">
+          The library is flexible and straightforward, making it perfect for
+          developers looking to enhance form functionality without adding
+          unnecessary complexity or external dependencies.
         </p>
       </section>
       <section id="key-concepts">
         <h2 className="text-3xl font-bold">Key Concepts</h2>
         <div className="mt-4 grid gap-8">
           <div>
-            <h3 className="text-xl font-semibold">Serverless Architecture</h3>
+            <h3 className="text-xl font-semibold">Real-time Input Masking</h3>
             <p className="mt-2 text-muted-foreground">
-              Our platform is built on a serverless architecture, which means
-              you can focus on building your application without worrying about
-              managing servers or infrastructure.
-            </p>
-          </div>
-          <div>
-            <h3 className="text-xl font-semibold">Automatic Scaling</h3>
-            <p className="mt-2 text-muted-foreground">
-              Our platform automatically scales your application to handle
-              increased traffic and demand, ensuring your users always have a
-              fast and reliable experience.
-            </p>
-          </div>
-          <div>
-            <h3 className="text-xl font-semibold">Integrated Tooling</h3>
-            <p className="mt-2 text-muted-foreground">
-              Our platform provides a suite of integrated tools and services,
-              including a powerful CLI, a comprehensive dashboard, and seamless
-              integration with your favorite development tools.
-            </p>
-          </div>
-        </div>
-      </section>
-      <section id="code-samples">
-        <h2 className="text-3xl font-bold">Code Samples</h2>
-        <div className="mt-4 space-y-8">
-          <div>
-            <h3 className="text-xl font-semibold">
-              Deploying a Simple Web App
-            </h3>
-            <Highlight
-              code={`import React from 'react';
-              
-function MyComponent() {
-  return (
-    <div className="bg-white rounded-lg shadow-md p-6">
-      <h2 className="text-2xl font-bold mb-4">Welcome to my component</h2>
-      <p className="text-gray-600 mb-6">
-        This is a sample React component with some basic styling.
-      </p>
-      <button className="bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded">
-        Click me
-      </button>
-    </div>
-  );
-}
-
-export default MyComponent;`}
-            />
-            <p className="mt-4 text-muted-foreground">
-              This code sample demonstrates how to use the Acme CLI to create a
-              new web application and deploy it to our platform.
+              Easily define and apply masks to input fields for a wide range of
+              use cases, such as phone numbers, dates, and custom formats. The
+              mask dynamically formats user input as they type, enhancing the
+              user experience.
             </p>
           </div>
           <div>
             <h3 className="text-xl font-semibold">
-              Configuring Automatic Scaling
-            </h3>
-            <pre className="mt-4 rounded-lg bg-muted p-4 font-mono text-sm">
-              <code>{`
-# Configure auto-scaling
-acme scale my-app --min-instances 2 --max-instances 10
-
-# Monitor scaling events
-acme logs my-app --events
-                      `}</code>
-            </pre>
-            <p className="mt-4 text-muted-foreground">
-              This code sample shows how to configure automatic scaling for your
-              application, as well as how to monitor scaling events using the
-              Acme CLI.
-            </p>
-          </div>
-        </div>
-      </section>
-      <section id="advanced-topics">
-        <h2 className="text-3xl font-bold">Advanced Topics</h2>
-        <div className="mt-4 grid gap-8">
-          <div>
-            <h3 className="text-xl font-semibold">
-              Integrating with Third-Party Services
+              Customizable Validation Rules
             </h3>
             <p className="mt-2 text-muted-foreground">
-              Our platform provides seamless integration with a wide range of
-              third-party services, including databases, authentication
-              providers, and more. Learn how to connect your application to
-              these services and leverage their capabilities.
+              Validate user input with simple yet powerful custom rules. Define
+              your own validation logic, from simple required fields to complex
+              input patterns.
             </p>
           </div>
           <div>
-            <h3 className="text-xl font-semibold">
-              Implementing Custom Domains
-            </h3>
+            <h3 className="text-xl font-semibold">TypeScript-First Design</h3>
             <p className="mt-2 text-muted-foreground">
-              Customize the domain for your application to match your brand and
-              provide a cohesive user experience. Our platform makes it easy to
-              set up and manage custom domains.
+              Built with TypeScript, Ts Nano Form offers full type safety,
+              autocompletion, and error checking at compile time, making
+              development faster and more reliable.
             </p>
           </div>
           <div>
-            <h3 className="text-xl font-semibold">Monitoring and Debugging</h3>
+            <h3 className="text-xl font-semibold">Dependency-Free</h3>
             <p className="mt-2 text-muted-foreground">
-              Our platform provides powerful tools for monitoring the health and
-              performance of your application, as well as debugging any issues
-              that may arise. Learn how to leverage these tools to ensure your
-              application is running smoothly.
+              Completely free of external dependencies, ensuring a lightweight
+              footprint and compatibility with any project, without the risk of
+              conflicting libraries.
+            </p>
+          </div>
+          <div>
+            <h3 className="text-xl font-semibold">Simple API</h3>
+            <p className="mt-2 text-muted-foreground">
+              A clean and intuitive API allows developers to easily configure
+              input masks and validation logic with minimal setup. Prioritizes
+              simplicity without sacrificing flexibility.
+            </p>
+          </div>
+          <div>
+            <h3 className="text-xl font-semibold">Built-in Patterns</h3>
+            <p className="mt-2 text-muted-foreground">
+              Includes built-in patterns for common use cases like credit cards,
+              phone numbers, postal codes, and more. Simply plug in the desired
+              mask pattern and you&apos;re good to go.
+            </p>
+          </div>
+          <div>
+            <h3 className="text-xl font-semibold">Customizable Mask Formats</h3>
+            <p className="mt-2 text-muted-foreground">
+              Create custom mask formats for any type of input, from social
+              security numbers to custom identification strings, with full
+              control over the input behavior.
+            </p>
+          </div>
+          <div>
+            <h3 className="text-xl font-semibold">Lightweight and Fast</h3>
+            <p className="mt-2 text-muted-foreground">
+              Optimized for performance, ensuring that even with complex
+              validation rules and masks, your forms remain responsive and
+              efficient.
             </p>
           </div>
         </div>
