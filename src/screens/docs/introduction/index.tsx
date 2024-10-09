@@ -1,94 +1,93 @@
+import { SubTitleText, Text, TitleText } from "@/components/typograph";
 import React from "react";
 
 export default function Introduction() {
   return (
     <>
       <section id="introduction">
-        <h2 className="text-3xl font-bold">Introduction</h2>
-        <p className="mt-4 text-muted-foreground">
+        <TitleText>Introduction</TitleText>
+        <Text className="mb-2">
           Lightweight, dependency-free library designed to streamline input text
           validation and masking .
-        </p>
-        <p className="mt-2 text-muted-foreground">
+        </Text>
+        <Text className="mb-2">
           Built entirely in TypeScript, ensures type safety and a smooth
           developer experience, while offering powerful features to enhance user
           input handling.
-        </p>
-        <p className="mt-2 text-muted-foreground">
+        </Text>
+        <Text>
           The library is flexible and straightforward, making it perfect for
           developers looking to enhance form functionality without adding
           unnecessary complexity or external dependencies.
-        </p>
+        </Text>
       </section>
       <section id="key-concepts">
-        <h2 className="text-3xl font-bold">Key Concepts</h2>
-        <div className="mt-4 grid gap-8">
+        <TitleText>Key Concepts</TitleText>
+        <div className="mt-4 grid gap-4">
           <div>
-            <h3 className="text-xl font-semibold">Real-time Input Masking</h3>
-            <p className="mt-2 text-muted-foreground">
+            <SubTitleText>Real-time Input Masking</SubTitleText>
+            <Text>
               Easily define and apply masks to input fields for a wide range of
               use cases, such as phone numbers, dates, and custom formats. The
               mask dynamically formats user input as they type, enhancing the
               user experience.
-            </p>
+            </Text>
           </div>
           <div>
-            <h3 className="text-xl font-semibold">
-              Customizable Validation Rules
-            </h3>
-            <p className="mt-2 text-muted-foreground">
+            <SubTitleText>Customizable Validation Rules</SubTitleText>
+            <Text>
               Validate user input with simple yet powerful custom rules. Define
               your own validation logic, from simple required fields to complex
               input patterns.
-            </p>
+            </Text>
           </div>
           <div>
-            <h3 className="text-xl font-semibold">TypeScript-First Design</h3>
-            <p className="mt-2 text-muted-foreground">
+            <SubTitleText>TypeScript-First Design</SubTitleText>
+            <Text>
               Built with TypeScript, Ts Nano Form offers full type safety,
               autocompletion, and error checking at compile time, making
               development faster and more reliable.
-            </p>
+            </Text>
           </div>
           <div>
-            <h3 className="text-xl font-semibold">Dependency-Free</h3>
-            <p className="mt-2 text-muted-foreground">
+            <SubTitleText>Dependency-Free</SubTitleText>
+            <Text>
               Completely free of external dependencies, ensuring a lightweight
               footprint and compatibility with any project, without the risk of
               conflicting libraries.
-            </p>
+            </Text>
           </div>
           <div>
-            <h3 className="text-xl font-semibold">Simple API</h3>
-            <p className="mt-2 text-muted-foreground">
+            <SubTitleText>Simple API</SubTitleText>
+            <Text>
               A clean and intuitive API allows developers to easily configure
               input masks and validation logic with minimal setup. Prioritizes
               simplicity without sacrificing flexibility.
-            </p>
+            </Text>
           </div>
           <div>
-            <h3 className="text-xl font-semibold">Built-in Patterns</h3>
-            <p className="mt-2 text-muted-foreground">
+            <SubTitleText>Built-in Patterns</SubTitleText>
+            <Text>
               Includes built-in patterns for common use cases like credit cards,
               phone numbers, postal codes, and more. Simply plug in the desired
               mask pattern and you&apos;re good to go.
-            </p>
+            </Text>
           </div>
           <div>
-            <h3 className="text-xl font-semibold">Customizable Mask Formats</h3>
-            <p className="mt-2 text-muted-foreground">
+            <SubTitleText>Customizable Mask Formats</SubTitleText>
+            <Text>
               Create custom mask formats for any type of input, from social
               security numbers to custom identification strings, with full
               control over the input behavior.
-            </p>
+            </Text>
           </div>
           <div>
-            <h3 className="text-xl font-semibold">Lightweight and Fast</h3>
-            <p className="mt-2 text-muted-foreground">
+            <SubTitleText>Lightweight and Fast</SubTitleText>
+            <Text>
               Optimized for performance, ensuring that even with complex
               validation rules and masks, your forms remain responsive and
               efficient.
-            </p>
+            </Text>
           </div>
         </div>
       </section>

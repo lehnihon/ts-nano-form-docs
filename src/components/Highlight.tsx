@@ -1,6 +1,7 @@
 "use client";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
+import { toast } from "sonner";
 
 export default function Highlight({ code }: { code: string }) {
   const [copy, setCopy] = useState(false);
@@ -9,14 +10,15 @@ export default function Highlight({ code }: { code: string }) {
     try {
       setCopy(true);
       navigator.clipboard.writeText(code);
+      toast("Copied successfully");
     } catch (error) {
       console.error("Unable to copy to clipboard:", error);
     }
   };
 
   return (
-    <div className="bg-[#1e1e1e] rounded-lg pl-6 pb-6 pr-2 pt-2 w-full max-w-4xl">
-      <div className="flex items-center justify-end mb-2">
+    <div className="bg-[#1e1e1e] rounded-lg p-6 w-full max-w-4xl relative">
+      <div className="flex items-center justify-end absolute right-1 top-1">
         <Button
           onClick={handleCopy}
           variant="ghost"
@@ -40,7 +42,7 @@ export default function Highlight({ code }: { code: string }) {
 function CopyIcon() {
   return (
     <svg
-      className="w-5 h-5"
+      className="w-4 h-4"
       xmlns="http://www.w3.org/2000/svg"
       width="24"
       height="24"
@@ -60,7 +62,7 @@ function CopyIcon() {
 function CopiedIcon() {
   return (
     <svg
-      className="w-5 h-5"
+      className="w-4 h-4"
       xmlns="http://www.w3.org/2000/svg"
       width="24"
       height="24"

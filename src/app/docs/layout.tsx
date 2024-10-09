@@ -19,6 +19,15 @@ export default function DocsLayout({
               <li>
                 <NavMenu href="/docs/quick-start">Quick Start</NavMenu>
               </li>
+              <li>
+                <NavMenu href="/docs/form">Form</NavMenu>
+              </li>
+              <li>
+                <NavMenu href="/docs/store">Store</NavMenu>
+              </li>
+              <li>
+                <NavMenu href="/docs/mask">Mask</NavMenu>
+              </li>
             </ul>
           </div>
         </nav>
