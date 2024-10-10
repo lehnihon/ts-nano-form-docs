@@ -4,7 +4,7 @@ import React from "react";
 export default function Introduction() {
   return (
     <>
-      <section id="introduction">
+      <section id="introduction" className="max-w-4xl">
         <TitleText>Introduction</TitleText>
         <Text className="mb-2">
           Lightweight, dependency-free library designed to streamline input text
@@ -21,7 +21,7 @@ export default function Introduction() {
           unnecessary complexity or external dependencies.
         </Text>
       </section>
-      <section id="key-concepts">
+      <section id="key-concepts" className="max-w-4xl">
         <TitleText>Key Concepts</TitleText>
         <div className="mt-4 grid gap-4">
           <div>

@@ -6,8 +6,8 @@ import { storeCode } from "./codes";
 export default function Store() {
   return (
     <>
-      <section id="stores">
-        <TitleText>Stores</TitleText>
+      <section id="stores" className="max-w-4xl">
+        <TitleText>Store</TitleText>
         <Text className="mb-4">
           Store is a core functionality in Ts Nano Form designed to store a
           value that can be validated and observed in real time. This feature

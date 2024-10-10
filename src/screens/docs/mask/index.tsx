@@ -6,7 +6,7 @@ import { maskCode, maskStoreCode } from "./codes";
 export default function Mask() {
   return (
     <>
-      <section id="mask">
+      <section id="mask" className="max-w-4xl">
         <TitleText>Mask</TitleText>
         <Text>There are some ready-to-use standard rules:</Text>
         <ul className="mb-4 ml-6 list-disc [&>li]:mt-2">
@@ -31,6 +31,8 @@ export default function Mask() {
           </Text>
           <Highlight code={maskCode} />
         </div>
+      </section>
+      <section id="store-mask" className="max-w-4xl">
         <div>
           <SubTitleText>Store Mask</SubTitleText>
           <Text className="mb-2">

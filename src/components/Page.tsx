@@ -38,7 +38,7 @@ export default function Page({ children }: { children: React.ReactNode }) {
           </div>
         </div>
       </header>
-      <main>{children}</main>
+      <main className="flex-1">{children}</main>
       <footer className="border-t bg-muted">
         <div className="container mx-auto flex items-center justify-between py-6 px-4 md:px-6">
           <p className="text-xs text-muted-foreground">

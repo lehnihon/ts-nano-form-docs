@@ -1,5 +1,7 @@
 export const installCode = `npm install ts-nano-form`;
-export const formUserCode = `type FormUserType = {
+export const formUserCode = `import createForm from "ts-nano-form";
+
+type FormUserType = {
   name: string;
   document: string;
 };

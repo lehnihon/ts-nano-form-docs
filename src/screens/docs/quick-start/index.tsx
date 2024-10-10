@@ -6,7 +6,7 @@ import { Text, TitleText } from "@/components/typograph";
 export default function QuickStart() {
   return (
     <>
-      <section id="quick-start">
+      <section id="quick-start" className="max-w-4xl">
         <TitleText>Quick Start</TitleText>
         <Text className="mb-4">
           To get started, follow these simple steps to install and integrate the
@@ -16,7 +16,7 @@ export default function QuickStart() {
           <Highlight code={installCode} />
         </div>
       </section>
-      <section id="examples">
+      <section id="examples" className="max-w-4xl">
         <TitleText>Example</TitleText>
         <div className="mt-4 grid gap-8">
           <div>

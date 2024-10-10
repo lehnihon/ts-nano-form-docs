@@ -19,7 +19,6 @@ const {
   getValue,
   getMasked,
   getMoneyMasked,
-  getMoneyMasked,
   getMoneyUnmasked,
 } = field("document");
 
