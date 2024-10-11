@@ -1,16 +1,23 @@
-export const submitCode = `import { FormUserFields, FormUser } from "./FormUser";
+export const submitCode = `import { FormUser } from "./FormUser";
 
 const { submit } = FormUser;
 
-const handleSubmit = (e: React.SyntheticEvent<HTMLFormElement>) => {
-  e.preventDefault();
-  submit((data) => {
-    const errors = { ...FormUserFields };
-    if (!data.name) errors.name = "name required";
-    //check for errors
-    if (JSON.stringify(errors) === JSON.stringify(TsFormUserInitalValues))
-      console.log("send data", data);
+const fetcher = async (data) => {
+  try {
+    await fetch("https://jsonplaceholder.typicode.com/posts", {
+    method: "POST",
+    headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+    },
+   body: JSON.stringify(data),
+    });
+  } catch (e) {
+      console.log(e);
+  }
+}
 
-    return errors;
-  });
+const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  e.preventDefault();
+  submit(fetcher);
 };`;
