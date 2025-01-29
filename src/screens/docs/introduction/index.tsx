@@ -47,8 +47,7 @@ export default function Introduction() {
             <SubTitleText>TypeScript-First Design</SubTitleText>
             <Text>
               Built with TypeScript, Ts Nano Form offers full type safety,
-              autocompletion, and error checking at compile time, making
-              development faster and more reliable.
+              autocompletion, making development faster and more reliable.
             </Text>
           </div>
           <div>
