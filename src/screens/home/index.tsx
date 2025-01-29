@@ -27,13 +27,6 @@ export default function Home() {
                 >
                   Get Started
                 </Link>
-                <Link
-                  href="/demos/basic"
-                  className="inline-flex h-10 items-center justify-center rounded-md border border-primary-foreground/20 bg-primary/10 px-6 text-sm font-medium text-primary-foreground shadow-sm transition-colors hover:bg-primary-foreground/20 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
-                  prefetch={false}
-                >
-                  View Demo
-                </Link>
               </div>
             </div>
           </div>

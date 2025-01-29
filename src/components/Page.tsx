@@ -32,9 +32,6 @@ export default function Page({ children }: { children: React.ReactNode }) {
             <NavMenu className="text-sm font-medium" href="/examples">
               Examples
             </NavMenu>
-            <NavMenu className="text-sm font-medium" href="/demos">
-              Demos
-            </NavMenu>
           </nav>
           <div className="ml-auto">
             <ToogleThemeButton />
