@@ -9,7 +9,7 @@ export default function Page({ children }: { children: React.ReactNode }) {
       <header className="sticky top-0 z-20 border-b bg-background">
         <div className="container mx-auto flex h-16 items-center px-4 md:px-6">
           <nav className="flex items-center space-x-4">
-            <Link href="#" className="mr-6 flex items-center" prefetch={false}>
+            <Link href="/" className="mr-6 flex items-center" prefetch={false}>
               <svg
                 className="h-6 w-6"
                 xmlns="http://www.w3.org/2000/svg"
@@ -24,13 +24,16 @@ export default function Page({ children }: { children: React.ReactNode }) {
               >
                 <path d="m8 3 4 8 5-5 5 15H2L8 3z" />
               </svg>
-              <span className="sr-only">Acme Inc</span>
+              <span className="sr-only">Ts Nano Form</span>
             </Link>
             <NavMenu className="text-sm font-medium" href="/docs">
               Docs
             </NavMenu>
-            <NavMenu className="text-sm font-medium" href="/contact">
-              Contact
+            <NavMenu className="text-sm font-medium" href="/examples">
+              Examples
+            </NavMenu>
+            <NavMenu className="text-sm font-medium" href="/demos">
+              Demos
             </NavMenu>
           </nav>
           <div className="ml-auto">
@@ -41,17 +44,8 @@ export default function Page({ children }: { children: React.ReactNode }) {
       <main className="flex-1">{children}</main>
       <footer className="border-t bg-muted">
         <div className="container mx-auto flex items-center justify-between py-6 px-4 md:px-6">
-          <p className="text-xs text-muted-foreground">
-            &copy; 2024 Acme Inc. All rights reserved.
-          </p>
-          <nav className="flex items-center space-x-4">
-            <Link href="#" className="text-xs hover:underline" prefetch={false}>
-              Terms of Service
-            </Link>
-            <Link href="#" className="text-xs hover:underline" prefetch={false}>
-              Privacy Policy
-            </Link>
-          </nav>
+          <p className="text-xs text-muted-foreground">&copy; TS Nano Form</p>
+          <nav className="flex items-center space-x-4"></nav>
         </div>
       </footer>
     </div>
