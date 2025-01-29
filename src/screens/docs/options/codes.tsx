@@ -25,7 +25,9 @@ export const FormUserFields = {
   document: "",
 };
 
-export const FormUser = createForm<FormUserType>({
+const TsNanoForm = NanoForm();
+
+export const FormUser = TsNanoForm.createForm<FormUserType>({
   initialValues: FormUserFields,
   options: {
     maskOptions,
@@ -123,7 +125,7 @@ const DEFAULT_MASK_OPTIONS = {
   ]),
 };`;
 
-export const optionBeforeCode = `import createForm, { MapOptions } from "ts-nano-form";
+export const optionBeforeCode = `import NanoForm, { MapOptions } from "ts-nano-form";
 
 type FormUserType = {
   document: string;
@@ -147,7 +149,9 @@ export const FormUserFields = {
   document: "",
 };
 
-const FormUser = createForm<FormUserType>({
+const TsNanoForm = NanoForm();
+
+const FormUser = TsNanoForm.createForm<FormUserType>({
   initialValues: FormUserFields,
   options: {
     maskOptions,

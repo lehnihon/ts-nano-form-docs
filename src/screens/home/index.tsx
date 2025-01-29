@@ -89,9 +89,11 @@ export default function Home() {
             <div className="rounded-md border border-input bg-background p-4">
               <h3 className="text-lg font-bold">Import and Use</h3>
               <pre className="mt-2 overflow-auto rounded-md bg-muted p-4 text-sm">
-                <code>{`import createForm from "ts-nano-form";
+                <code>{`import NanoForm from "ts-nano-form";
 
-const FormUser = createForm();
+const TsNanoForm = NanoForm();
+
+const FormUser = TsNanoForm.createForm();
 
 FormUser.field("name").setValue("John Doe");
 

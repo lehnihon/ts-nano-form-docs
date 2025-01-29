@@ -43,13 +43,24 @@ export default function DocsLayout({
               </ul>
             </div>
             <div>
-              <h3 className="font-semibold mb-2">API Form</h3>
+              <h3 className="font-semibold mb-2">API Nano Form</h3>
               <ul className="space-y-2 text-sm">
                 <li>
-                  <NavMenu href="/docs/api/submit">Submit</NavMenu>
+                  <NavMenu href="/docs/api/mask">Mask</NavMenu>
                 </li>
                 <li>
-                  <NavMenu href="/docs/api/field">Field</NavMenu>
+                  <NavMenu href="/docs/api/unmask">Unmask</NavMenu>
+                </li>
+                <li>
+                  <NavMenu href="/docs/api/mask-money">MaskMoney</NavMenu>
+                </li>
+                <li>
+                  <NavMenu href="/docs/api/unmask-money">UnmaskMoney</NavMenu>
+                </li>
+                <li>
+                  <NavMenu href="/docs/api/get-placeholder">
+                    GetPlaceholder
+                  </NavMenu>
                 </li>
                 <li>
                   <NavMenu href="/docs/api/set-rules-mask">
@@ -64,14 +75,20 @@ export default function DocsLayout({
                 <li>
                   <NavMenu href="/docs/api/get-rules">GetRules</NavMenu>
                 </li>
-                <li>
-                  <NavMenu href="/docs/api/get-is-valid">GetIsValid</NavMenu>
-                </li>
               </ul>
             </div>
             <div>
-              <h3 className="font-semibold mb-2">API Store</h3>
+              <h3 className="font-semibold mb-2">API Form</h3>
               <ul className="space-y-2 text-sm">
+                <li>
+                  <NavMenu href="/docs/api/submit">Submit</NavMenu>
+                </li>
+                <li>
+                  <NavMenu href="/docs/api/field">Field</NavMenu>
+                </li>
+                <li>
+                  <NavMenu href="/docs/api/get-is-valid">GetIsValid</NavMenu>
+                </li>
                 <li>
                   <NavMenu href="/docs/api/get-value">GetValue</NavMenu>
                 </li>
@@ -137,26 +154,8 @@ export default function DocsLayout({
               </ul>
             </div>
             <div>
-              <h3 className="font-semibold mb-2">API Mask</h3>
-              <ul className="space-y-2 text-sm">
-                <li>
-                  <NavMenu href="/docs/api/mask">Mask</NavMenu>
-                </li>
-                <li>
-                  <NavMenu href="/docs/api/unmask">Unmask</NavMenu>
-                </li>
-                <li>
-                  <NavMenu href="/docs/api/mask-money">MaskMoney</NavMenu>
-                </li>
-                <li>
-                  <NavMenu href="/docs/api/unmask-money">UnmaskMoney</NavMenu>
-                </li>
-                <li>
-                  <NavMenu href="/docs/api/get-placeholder">
-                    GetPlaceholder
-                  </NavMenu>
-                </li>
-              </ul>
+              <h3 className="font-semibold mb-2">API Store</h3>
+              <ul className="space-y-2 text-sm"></ul>
             </div>
           </div>
         </nav>
