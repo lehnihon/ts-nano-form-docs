@@ -1,3 +1,5 @@
+"use client";
+
 import { SubTitleText, Text, TitleText } from "@/components/typograph";
 import React from "react";
 
