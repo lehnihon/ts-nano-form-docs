@@ -8,7 +8,6 @@ export const angularInputHtmlCode = `<div>
 </div>`;
 
 export const angularInputTsCode = `import { Component, OnInit } from "@angular/core";
-import createForm from "ts-nano-form";
 import FormUser from "./createFormUser";
 
 const { field } = FormUser;

@@ -3,7 +3,7 @@ export const vanillaHtmlCode = `<form class="form">
   <input type="submit" value="submit" />
 </form>`;
 
-export const vanillaTsCode = `import createForm from "ts-nano-form";
+export const vanillaTsCode = `import NanoForm from "ts-nano-form";
 
 type FormUserType = {
   name: string;
@@ -18,7 +18,9 @@ const resolver = (data: any) => {
   return errors;
 };
 
-const FormUser = createForm<FormUserType>({ resolver });
+const TsNanoForm = NanoForm();
+
+const FormUser = TsNanoForm.createForm<FormUserType>({ resolver });
 
 const { field, submit } = FormUser;
 

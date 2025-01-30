@@ -1,4 +1,5 @@
-export const yupCode = `import { AnyObject, ObjectSchema, ValidationError } from "yup";
+export const yupCode = `import NanoForm from "ts-nano-form";
+import { AnyObject, ObjectSchema, ValidationError } from "yup";
 
 const validateYup = <T>(data: T, schema: ObjectSchema<AnyObject>) => {
   let errors = { ...data };
@@ -22,6 +23,8 @@ const formSchema = object({
 
 type FormUser = InferType<typeof formSchema>;
 
-const TsForm = createForm<FormUser>({
+const TsNanoForm = NanoForm();
+
+const TsForm = TsNanoForm.createForm<FormUser>({
   resolver: validateYup(formSchema),
 });`;

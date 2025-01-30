@@ -1,5 +1,5 @@
 export const vueCode = `<script>
-import createForm from 'ts-nano-form'
+import NanoForm from 'ts-nano-form'
 
 const resolver = (data) => {
   const errors = {
@@ -10,7 +10,9 @@ const resolver = (data) => {
   return errors
 }
 
-const FormUser = createForm({
+const TsNanoForm = NanoForm();
+
+const FormUser = TsNanoForm.createForm({
   resolver: resolver
 })
 const { field, submit } = FormUser

@@ -1,4 +1,5 @@
-export const zodCode = `import { z } from "zod";
+export const zodCode = `import NanoForm from "ts-nano-form";
+import { z } from "zod";
 
 const validateZod = <T>(data: T, schema: z.ZodType<T>) => {
   let errors = { ...data };
@@ -21,6 +22,8 @@ export const formSchema = z.object({
 
 type FormUser = InferType<typeof formSchema>;
 
-const TsForm = createForm<FormUser>({
+const TsNanoForm = NanoForm();
+
+const TsForm = TsNanoForm.createForm<FormUser>({
   resolver: validateZod(formSchema),
 });`;

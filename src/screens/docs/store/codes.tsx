@@ -1,10 +1,12 @@
-export const storeCode = `import createForm from "ts-nano-form";
+export const storeCode = `import NanoForm from "ts-nano-form";
 
 type FormUserType = {
   document: string;
 };
 
-const FormUser = createForm<FormUserType>({
+const TsNanoForm = NanoForm();
+
+const FormUser = TsNanoForm.createForm<FormUserType>({
   initialValues: {
     document: "12345",
   },
