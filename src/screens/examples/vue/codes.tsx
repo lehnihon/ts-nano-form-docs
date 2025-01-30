@@ -13,6 +13,7 @@ const resolver = (data) => {
 const TsNanoForm = NanoForm();
 
 const FormUser = TsNanoForm.createForm({
+  name: "form-user",
   resolver: resolver
 })
 const { field, submit } = FormUser

@@ -26,5 +26,6 @@ type FormUser = InferType<typeof formSchema>;
 const TsNanoForm = NanoForm();
 
 const TsForm = TsNanoForm.createForm<FormUser>({
+  name: "form-user",
   resolver: validateYup(formSchema),
 });`;

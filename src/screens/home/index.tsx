@@ -93,7 +93,7 @@ export default function Home() {
 
 const TsNanoForm = NanoForm();
 
-const FormUser = TsNanoForm.createForm();
+const FormUser = TsNanoForm.createForm({ name: "form-user"});
 
 FormUser.field("name").setValue("John Doe");
 

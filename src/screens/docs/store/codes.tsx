@@ -7,6 +7,7 @@ type FormUserType = {
 const TsNanoForm = NanoForm();
 
 const FormUser = TsNanoForm.createForm<FormUserType>({
+  name: "form-user",
   initialValues: {
     document: "12345",
   },

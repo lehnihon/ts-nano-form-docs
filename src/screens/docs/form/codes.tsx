@@ -15,7 +15,7 @@ const resolver = (values: FormUserType) => {
 
 const TsNanoForm = NanoForm();
 
-export const FormUser = TsNanoForm.createForm<FormUserType>({ resolver });
+export const FormUser = TsNanoForm.createForm<FormUserType>({ name: "form-user", resolver });
 
 const { submit, field } = FormUser;
 
