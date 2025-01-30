@@ -15,7 +15,9 @@ const resolver = (values: FormUserType) => {
 
 const TsNanoForm = NanoForm();
 
-export const FormUser = TsNanoForm.createForm<FormUserType>({ name: "form-user", resolver });
+const { createForm } = TsNanoForm
+
+export const FormUser = createForm<FormUserType>({ name: "form-user", resolver });
 
 const { submit, field } = FormUser;
 
@@ -28,9 +30,11 @@ submit((data) => {
 console.log(field("document").getError());
 // document required`;
 
-export const fieldCode = `import { FormUser } from "./FormUser";
+export const fieldCode = `import TsNanoForm from "./nanoForm";
 
-const { submit, field } = FormUser;
+const { getForm } = TsNanoForm
+const formUser = getForm("user");
+const { submit, field } = formUser;
 
 field("name").setValue("John Doe");
 field("document").setMasked("123456", "000-000");
@@ -40,9 +44,11 @@ submit((data) => {
 });
 // FETCH {name: 'John Doe', document: '123-456'}`;
 
-export const submitCode = `import { FormUser } from "./FormUser";
+export const submitCode = `import TsNanoForm from "./nanoForm";
 
-const { submit, field } = FormUser;
+const { getForm } = TsNanoForm
+const formUser = getForm("user");
+const { submit, field } = formUser;
 
 field("name").setValue("John Doe");
 field("document").setMasked("123456", "000-000");

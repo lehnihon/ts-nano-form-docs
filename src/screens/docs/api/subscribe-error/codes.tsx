@@ -1,6 +1,7 @@
-export const subscribeErrorCode = `import { FormUser } from "./FormUser";
+export const subscribeErrorCode = `import TsNanoForm from "./nanoForm";
 
-const { field } = FormUser;
+const formUser = TsNanoForm.getForm("user");
+const { field } = formUser;
 const { subscribeError } = field("name");
 
 subscribeError((value: string, prevValue: string) =>

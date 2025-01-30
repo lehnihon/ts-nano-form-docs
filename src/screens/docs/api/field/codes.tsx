@@ -1,6 +1,7 @@
-export const fieldCode = `import { FormUserFields, FormUser } from "./FormUser";
+export const fieldCode = `import TsNanoForm from "./nanoForm";
 
-const { field } = FormUser;
+const formUser = TsNanoForm.getForm("user");
+const { field } = formUser;
 const { setMasked } = field("document");
 
 setMasked("123456", "000-000");`;

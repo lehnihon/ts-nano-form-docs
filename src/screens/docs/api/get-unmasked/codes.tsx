@@ -1,5 +1,6 @@
-export const getUnmaskedCode = `import { FormUser } from "./FormUser";
+export const getUnmaskedCode = `import TsNanoForm from "./nanoForm";
 
-const { field } = FormUser;
+const formUser = TsNanoForm.getForm("user");
+const { field } = formUser;
 const { getUnmasked } = field("name");
 getUnmasked();`;

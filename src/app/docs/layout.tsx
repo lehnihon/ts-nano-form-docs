@@ -46,6 +46,12 @@ export default function DocsLayout({
               <h3 className="font-semibold mb-2">API Nano Form</h3>
               <ul className="space-y-2 text-sm">
                 <li>
+                  <NavMenu href="/docs/api/create-form">CreateForm</NavMenu>
+                </li>
+                <li>
+                  <NavMenu href="/docs/api/get-form">GetForm</NavMenu>
+                </li>
+                <li>
                   <NavMenu href="/docs/api/mask">Mask</NavMenu>
                 </li>
                 <li>

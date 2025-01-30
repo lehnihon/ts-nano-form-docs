@@ -1,20 +1,21 @@
 export const reactInputCode = `import { useSyncExternalStore } from "react";
-import FormUser from "./createFormUser";
+import useNanoForm from "./useNanoForm";
 
 interface InputTextProps {
-  field: string;
+  name: string;
 }
 
-const InputText = ({ field }: InputTextProps) => {
+const InputText = ({ name }: InputTextProps) => {
+  const { form } = useNanoForm();
   const { subscribeValue, getValue, subscribeError, getError, setValue } =
-    FormUser.field(field);
+    form.field(name);
 
   const value = useSyncExternalStore(subscribeValue, getValue);
   const error = useSyncExternalStore(subscribeError, getError);
 
   return (
     <>
-      <label>{field}</label>
+      <label>{name}</label>
       <input value={value} onChange={(e) => setValue(e.target.value)} />
       <p>{error}</p>
     </>
@@ -24,25 +25,63 @@ const InputText = ({ field }: InputTextProps) => {
 export default InputText;`;
 
 export const reactFormCode = `import InputText from "./InputText";
-import FormUser, { FormUserFields } from "./createFormUser";
+import TsNanoForm from "./nanoForm";
+import NanoFormProvider from "./nanoFormProvider";
 
-function Form() {
-  const { submit } = FormUser;
+function UserForm() {
+  const formUser = TsNanoForm.getForm("user");
 
   const handleSubmit = (e: React.SyntheticEvent<HTMLFormElement>) => {
     e.preventDefault();
-    submit((data) => console.log("submit", data));
+    formUser.submit((data) => console.log("submit", data));
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <InputText field="name" />
-      <InputText field="document" />
-      <p>
-        <input type="submit" value="Enviar" />
-      </p>
-    </form>
+    <NanoFormProvider form={formUser}>
+      <InputText name="name" />
+      <InputText name="document" />
+      <button onClick={handleSubmit}>Send</button>
+    </NanoFormProvider>
   );
 }
+`;
 
-export default Form;`;
+export const reactFormProvider = `import { createContext, ReactNode } from "react";
+import { CreateFormType } from "../lib/types";
+
+export interface NanoFormContextType {
+  form: CreateFormType<any>;
+}
+
+export const NanoFormContext = createContext<NanoFormContextType | undefined>(
+  undefined
+);
+
+interface NanoFormProviderProps {
+  form: CreateFormType<any>;
+  children: ReactNode;
+}
+
+const NanoFormProvider = ({ form, children }: NanoFormProviderProps) => {
+  return (
+    <NanoFormContext.Provider value={{ form }}>
+      {children}
+    </NanoFormContext.Provider>
+  );
+};
+
+export default NanoFormProvider;`;
+
+export const reactFormContext = `import { useContext } from "react";
+import { NanoFormContext, NanoFormContextType } from "./nanoFormProvider";
+
+const useNanoForm = (): NanoFormContextType => {
+  const context = useContext(NanoFormContext);
+  if (!context) {
+    throw new Error("useNanoForm must be used inside a NanoFormProvider");
+  }
+  return context;
+};
+
+export default useNanoForm;
+`;

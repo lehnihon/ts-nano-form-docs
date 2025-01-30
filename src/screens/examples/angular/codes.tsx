@@ -8,9 +8,9 @@ export const angularInputHtmlCode = `<div>
 </div>`;
 
 export const angularInputTsCode = `import { Component, OnInit } from "@angular/core";
-import FormUser from "./createFormUser";
+import TsNanoForm from "./nanoForm";
 
-const { field } = FormUser;
+const { field } = TsNanoForm.getForm("user");
 
 @Component({
   selector: "app-form",
@@ -43,9 +43,9 @@ export const angularFormHtmlCode = `<div>
 </div>`;
 
 export const angularFormTsCode = `import { Component } from "@angular/core";
-import { FormUser, FormUserFields } from "../formUser";
+import TsNanoForm from "./nanoForm";
 
-const { submit } = FormUser;
+const { submit } = TsNanoForm.getForm("user");
 
 @Component({
   selector: "app-root",

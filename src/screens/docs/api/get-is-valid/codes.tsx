@@ -1,4 +1,5 @@
-export const getIsValidCode = `import { FormUser } from "./FormUser";
+export const getIsValidCode = `import TsNanoForm from "./nanoForm";
 
-const { getIsValid } = FormUser;
+const formUser = TsNanoForm.getForm("user");
+const { getIsValid } = formUser;
 getIsValid();`;

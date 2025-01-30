@@ -15,10 +15,11 @@ const resolver = (values: FormUserType) => {
 };
 
 const TsNanoForm = NanoForm();
+const { createForm } = TsNanoForm
 
-const FormUser = TsNanoForm.createForm<FormUserType>({ name: "form-user", resolver });
+createForm<FormUserType>({ name: "form-user", resolver });
 
-const { submit, field, getErrors } = FormUser;
+const { submit, field, getErrors } = TsNanoForm.getForm('form-user');
 
 field("name").setValue("John Doe");
 

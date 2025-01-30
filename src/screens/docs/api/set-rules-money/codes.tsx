@@ -1,4 +1,4 @@
-export const setRulesMoneyCode = `import { FormUser } from "./FormUser";
+export const setRulesMoneyCode = `import TsNanoForm from "./nanoForm";
 
 const moneyOptions = {
   thousands: " ",
@@ -7,5 +7,5 @@ const moneyOptions = {
   prefix: "$",
 };
 
-const { setRulesMask } = FormUser;
+const { setRulesMask } = TsNanoForm;
 setRulesMoney(moneyOptions);`;

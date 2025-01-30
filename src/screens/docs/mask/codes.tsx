@@ -1,5 +1,7 @@
-export const maskCode = `import { FormUser } from "./FormUser";
+export const maskCode = `import TsNanoForm from "./nanoForm";
 
+const { getForm } = TsNanoForm
+const formUser = getForm("user");
 const { mask, unmask } = FormUser;
 mask("123456789", "000-000-000");
 //123-456-789
@@ -8,9 +10,11 @@ unmask("123-456-789");
 //123456789
 `;
 
-export const maskStoreCode = `import { FormUser } from "./FormUser";
+export const maskStoreCode = `import TsNanoForm from "./nanoForm";
 
-const { field } = FormUser;
+const { getForm } = TsNanoForm
+const formUser = getForm("user");
+const { field } = formUser;
 const {
   setValue,
   setMoney,

@@ -1,5 +1,6 @@
-export const getValuesCode = `import { FormUser } from "./FormUser";
+export const getValuesCode = `import TsNanoForm from "./nanoForm";
 
-const { getValues } = FormUser;
+const formUser = TsNanoForm.getForm("user");
+const { getValues } = formUser;
 getValues();
 `;

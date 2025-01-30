@@ -1,5 +1,6 @@
-export const setMoneyMaskedCode = `import { FormUser } from "./FormUser";
+export const setMoneyMaskedCode = `import TsNanoForm from "./nanoForm";
 
-const { field } = FormUser;
+const formUser = TsNanoForm.getForm("user");
+const { field } = formUser;
 const { setMoneyMasked } = field("name");
 setMoneyMasked("123456");`;

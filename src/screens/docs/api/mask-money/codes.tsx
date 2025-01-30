@@ -1,5 +1,5 @@
-export const maskMoneyCode = `import { FormUser } from "./FormUser";
+export const maskMoneyCode = `import TsNanoForm from "./nanoForm";
 
-const { maskMoney } = FormUser;
+const { maskMoney } = TsNanoForm;
 const masked = maskMoney("123456");
 //1.234,56`;

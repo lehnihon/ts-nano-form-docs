@@ -1,4 +1,4 @@
-export const getRulesCode = `import { FormUser } from "./FormUser";
+export const getRulesCode = `import TsNanoForm from "./nanoForm";
 
-const { getRules } = FormUser;
+const { getRules } = TsNanoForm;
 getRules();`;

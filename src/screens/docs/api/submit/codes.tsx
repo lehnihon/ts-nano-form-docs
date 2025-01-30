@@ -1,6 +1,7 @@
-export const submitCode = `import { FormUser } from "./FormUser";
+export const submitCode = `import TsNanoForm from "./nanoForm";
 
-const { submit } = FormUser;
+const formUser = TsNanoForm.getForm("user");
+const { submit } = formUser;
 
 const fetcher = async (data) => {
   try {

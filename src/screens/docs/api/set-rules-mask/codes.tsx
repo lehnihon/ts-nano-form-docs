@@ -1,8 +1,8 @@
-export const setRulesMaskCode = `import { FormUser } from "./FormUser";
+export const setRulesMaskCode = `import TsNanoForm from "./nanoForm";
 
 const maskOptions = {
   map: new Map<string, MapOptions>([["9", { pattern: /\d/ }]]),
 };
 
-const { setRulesMask } = FormUser;
+const { setRulesMask } = TsNanoForm;
 setRulesMask(maskOptions);`;

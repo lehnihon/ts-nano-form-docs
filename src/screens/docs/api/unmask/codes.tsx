@@ -1,5 +1,5 @@
-export const unmaskCode = `import { FormUser } from "./FormUser";
+export const unmaskCode = `import TsNanoForm from "./nanoForm";
 
-const { unmask } = FormUser;
+const { unmask } = TsNanoForm;
 const unmasked = unmask("ABC-1A23");
 //ABC1A23`;
