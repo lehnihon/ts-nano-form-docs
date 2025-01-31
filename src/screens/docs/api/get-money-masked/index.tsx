@@ -12,10 +12,7 @@ export default function GetMoneyMasked() {
         <Text className="mb-4">
           Get masked money without changing the store
         </Text>
-        <Code
-          className="mb-4"
-          code={`getMoneyMasked(maskRule: string): string`}
-        />
+        <Code className="mb-4" code={`getMoneyMasked(): string`} />
         <div>
           <Highlight code={getMoneyMaskedCode} />
         </div>

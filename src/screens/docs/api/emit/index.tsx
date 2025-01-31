@@ -2,20 +2,20 @@ import Highlight from "@/components/Highlight";
 import React from "react";
 import { Text, TitleText } from "@/components/typograph";
 import Code from "@/components/Code";
-import { unmaskMoneyCode } from "./codes";
+import { createEmitCode } from "./codes";
 
-export default function UnmaskMoney() {
+export default function EmitChanges() {
   return (
     <>
       <section id="stores" className="max-w-4xl">
-        <TitleText>UnmaskMoney</TitleText>
-        <Text className="mb-4">Unmask money text</Text>
+        <TitleText>Emit</TitleText>
+        <Text className="mb-4">Send a notification to the store</Text>
         <Code
           className="mb-4"
-          code={`unmaskMoney(value: string, moneyOptions?: MoneyOptions)`}
+          code={`emit: (value: any, prevValue: any) => void;`}
         />
         <div>
-          <Highlight code={unmaskMoneyCode} />
+          <Highlight code={createEmitCode} />
         </div>
       </section>
     </>

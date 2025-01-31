@@ -10,7 +10,10 @@ export default function Mask() {
       <section id="stores" className="max-w-4xl">
         <TitleText>Mask</TitleText>
         <Text className="mb-4">Mask text</Text>
-        <Code className="mb-4" code={`mask(value: string, maskRule: string)`} />
+        <Code
+          className="mb-4"
+          code={`mask(value: string, maskRule: string | string[], maskOptions?: MaskOptions)`}
+        />
         <div>
           <Highlight code={maskCode} />
         </div>

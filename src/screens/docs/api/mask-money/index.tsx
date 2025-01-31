@@ -10,7 +10,10 @@ export default function MaskMoney() {
       <section id="stores" className="max-w-4xl">
         <TitleText>MaskMoney</TitleText>
         <Text className="mb-4">Mask money text</Text>
-        <Code className="mb-4" code={`maskMoney(value: string)`} />
+        <Code
+          className="mb-4"
+          code={`maskMoney(value: string, moneyOptions?: MoneyOptions)`}
+        />
         <div>
           <Highlight code={maskMoneyCode} />
         </div>

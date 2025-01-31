@@ -12,7 +12,10 @@ export default function GetMasked() {
         <Text className="mb-4">
           Get masked value without changing the store
         </Text>
-        <Code className="mb-4" code={`getMasked(maskRule: string): string`} />
+        <Code
+          className="mb-4"
+          code={`getMasked(maskRule: string | string[]): string`}
+        />
         <div>
           <Highlight code={getMaskedCode} />
         </div>

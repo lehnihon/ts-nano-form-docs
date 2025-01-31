@@ -10,7 +10,10 @@ export default function GetPlaceholder() {
       <section id="stores" className="max-w-4xl">
         <TitleText>GetPlaceholder</TitleText>
         <Text className="mb-4">Get placeholder text</Text>
-        <Code className="mb-4" code={`getPlaceholder(maskRule: string)`} />
+        <Code
+          className="mb-4"
+          code={`getPlaceholder(value: string, maskOptions?: MaskOptions)`}
+        />
         <div>
           <Highlight code={getPlaceholderCode} />
         </div>

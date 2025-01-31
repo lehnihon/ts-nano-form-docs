@@ -59,11 +59,11 @@ export default function Home() {
             <div className="space-y-2">
               <FilesIcon />
               <h3 className="text-xl font-bold">
-                Seamless Integration with Form Libraries
+                Seamless Integration with frameworks
               </h3>
               <p className="text-muted-foreground">
-                Easily integrates with popular React/Angular/Vue form management
-                libraries like React Hook Form or Formik.
+                Easily integrates with popular frameworks React/Angular/Vue like
+                React Hook Form or Formik.
               </p>
             </div>
           </div>

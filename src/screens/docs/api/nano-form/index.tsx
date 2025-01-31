@@ -2,20 +2,23 @@ import Highlight from "@/components/Highlight";
 import React from "react";
 import { Text, TitleText } from "@/components/typograph";
 import Code from "@/components/Code";
-import { unmaskMoneyCode } from "./codes";
+import { nanoFormCode } from "./codes";
 
-export default function UnmaskMoney() {
+export default function NanoForm() {
   return (
     <>
       <section id="stores" className="max-w-4xl">
-        <TitleText>UnmaskMoney</TitleText>
-        <Text className="mb-4">Unmask money text</Text>
+        <TitleText>NanoForm</TitleText>
+        <Text className="mb-4">Nano Form initialization object</Text>
         <Code
           className="mb-4"
-          code={`unmaskMoney(value: string, moneyOptions?: MoneyOptions)`}
+          code={`NanoForm(params: {
+  maskOptions?: MaskOptions;
+  moneyOptions?: MoneyOptions;
+}) => NanoFormType`}
         />
         <div>
-          <Highlight code={unmaskMoneyCode} />
+          <Highlight code={nanoFormCode} />
         </div>
       </section>
     </>

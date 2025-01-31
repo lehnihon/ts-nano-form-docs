@@ -10,7 +10,10 @@ export default function Unmask() {
       <section id="stores" className="max-w-4xl">
         <TitleText>Unmask</TitleText>
         <Text className="mb-4">Unmask text</Text>
-        <Code className="mb-4" code={`unmask(value: string)`} />
+        <Code
+          className="mb-4"
+          code={`unmask(value: string,  maskOptions?: MaskOptions)`}
+        />
         <div>
           <Highlight code={unmaskCode} />
         </div>

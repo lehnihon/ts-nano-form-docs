@@ -12,7 +12,7 @@ export default function GetUnmasked() {
         <Text className="mb-4">
           Get unmasked value without changing the store
         </Text>
-        <Code className="mb-4" code={`getUnmasked(maskRule: string): string`} />
+        <Code className="mb-4" code={`getUnmasked(): string`} />
         <div>
           <Highlight code={getUnmaskedCode} />
         </div>

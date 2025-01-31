@@ -46,6 +46,9 @@ export default function DocsLayout({
               <h3 className="font-semibold mb-2">API Nano Form</h3>
               <ul className="space-y-2 text-sm">
                 <li>
+                  <NavMenu href="/docs/api/nano-form">NanoForm</NavMenu>
+                </li>
+                <li>
                   <NavMenu href="/docs/api/create-form">CreateForm</NavMenu>
                 </li>
                 <li>
@@ -67,19 +70,6 @@ export default function DocsLayout({
                   <NavMenu href="/docs/api/get-placeholder">
                     GetPlaceholder
                   </NavMenu>
-                </li>
-                <li>
-                  <NavMenu href="/docs/api/set-rules-mask">
-                    SetRulesMask
-                  </NavMenu>
-                </li>
-                <li>
-                  <NavMenu href="/docs/api/set-rules-money">
-                    SetRulesMoney
-                  </NavMenu>
-                </li>
-                <li>
-                  <NavMenu href="/docs/api/get-rules">GetRules</NavMenu>
                 </li>
               </ul>
             </div>
@@ -161,7 +151,23 @@ export default function DocsLayout({
             </div>
             <div>
               <h3 className="font-semibold mb-2">API Store</h3>
-              <ul className="space-y-2 text-sm"></ul>
+              <ul className="space-y-2 text-sm">
+                <li>
+                  <NavMenu href="/docs/api/create-store">CreateStore</NavMenu>
+                </li>
+                <li>
+                  <NavMenu href="/docs/api/set">Set</NavMenu>
+                </li>
+                <li>
+                  <NavMenu href="/docs/api/get">Get</NavMenu>
+                </li>
+                <li>
+                  <NavMenu href="/docs/api/emit">Emit</NavMenu>
+                </li>
+                <li>
+                  <NavMenu href="/docs/api/subscribe">Subscribe</NavMenu>
+                </li>
+              </ul>
             </div>
           </div>
         </nav>
